@@ -1,0 +1,12 @@
+OGR2N3
+
+Basically a proof of concept converting standard geo formats into RDF following proposed OGC standards for GeoSparql.
+
+What that means is the code is not guaranteed to do anything useful. I never got the OCI2N3 part working. Probably something screwy about my OCI installation. Since that didn't work, the generic OGR2N3 was never really even tried. Instead, I focused on SHP2N3 and used ogr2ogr to extract shapefiles out of Oracle Spatial.
+
+I didn't even try to include any details about the XML namespace for the actual schema of the source files. Instead, I just used a standard XML namespace (int, string, etc) and the OGC namespace for GML. This means there the resulting RDF does not reflect the ontology of the source data.
+
+Finally, I just output N3 because it's easier than "real" RDF.
+
+I actually stole the code originally from Sir Tim Berners-Lee's tab2n3.py (http://www.w3.org/2000/10/swap/tab2n3.py) and hacked it to do my bidding. I also changed it to reflect my own programming style.
+
